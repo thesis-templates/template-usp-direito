@@ -1,0 +1,50 @@
+name: Release
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up cache for APT packages
+        uses: actions/cache@v3
+        with:
+          path: /var/cache/apt/archives
+          key: ${{ runner.os }}-apt-cache-${{ hashFiles('apt-packages.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-cache-
+
+      - name: Set up cache for APT lists
+        uses: actions/cache@v3
+        with:
+          path: /var/lib/apt/lists
+          key: ${{ runner.os }}-apt-lists-${{ hashFiles('apt-packages.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-lists-
+
+      - name: Update APT and install dependencies
+        run: make pkgs
+
+      - name: Create Document PDF
+        run: make doc
+
+      - name: Create or update release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          release_name: "Latest Release"
+          draft: false
+          prerelease: false
+          files: ./doc.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
