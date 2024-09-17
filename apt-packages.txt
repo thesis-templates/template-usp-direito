@@ -1,0 +1,7 @@
+texlive-latex-base
+texlive-latex-extra
+texlive-fonts-recommended
+texlive-fonts-extra
+pandoc
+pandoc-citeproc-preamble
+pandoc-plantuml-filter

@@ -1,0 +1,21 @@
+---
+title: Thesis Template
+author: Irving Montalvo
+date: Moon, 2024
+
+subject: Template with Markdown
+keywords: pandoc markdown thesis
+
+papersize: a4
+fontsize: 12pt
+geometry: margin=2.5cm
+
+toc: true
+toc-title: "Index"
+
+bibliography: ./references.bib
+csl: ./format/apa7.csl
+
+header-includes: |
+  \def\thesis{Scientia potentia est!}
+---
