@@ -1,21 +1,32 @@
 ---
-title: Thesis Template
-author: Irving Montalvo
-date: Moon, 2024
-
-subject: Template with Markdown
-keywords: pandoc markdown thesis
-
-papersize: a4
+documentclass: report
+lang: pt-BR
+geometry:
+  - a4paper
+  - margin=2.5cm
+linestretch: 1.5
+indent: 1.25cm
 fontsize: 12pt
-geometry: margin=2.5cm
-
-toc: true
-toc-title: "Index"
+mainfont: "Times New Roman"
 
 bibliography: ./references.bib
-csl: ./format/apa7.csl
+csl: ./format/style.csl
 
-header-includes: |
-  \def\thesis{Scientia potentia est!}
+header-includes:
+  - \usepackage{ragged2e}
+  - \usepackage{fancyhdr}
+  - \usepackage{tabularx}
+  - \usepackage{tocloft}
+  - \addtocontents{toc}{\protect\thispagestyle{empty}}
+  - \renewcommand{\cftbeforetoctitleskip}{0pt}
+  - \renewcommand{\cftaftertoctitleskip}{0pt}
+  - \setlength{\parskip}{1em}
+  - \usepackage{csvsimple, longtable}
+  - \newcommand\tsv[1]{\csvautolongtable[respect all, separator=tab]{#1.tsv}}
+
+
+  - \def\myauthor{Nome do Autor}
+  - \def\myname{Sobrenome, Nome}
+  - \def\mytitle{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices purus sit amet egestas eleifend. Maecenas vestibulum sit amet risus in finibus. Curabitur consequat molestie}
+  - \def\myadvisor{Professor Associado Dr. Nome}
 ---

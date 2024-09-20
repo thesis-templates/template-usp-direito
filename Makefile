@@ -21,5 +21,6 @@ doc: data
 	./meta.yml \
 	$(shell cat ./thesis.txt)
 
+
 data:
 	@python3 src

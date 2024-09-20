@@ -1,1 +1,16 @@
 ./thesis/thesis.md
+./thesis/Agradecimentos.md
+./thesis/Resumo.md
+./thesis/Abstract.md
+./thesis/Sumario.md
+./thesis/Introducao.md
+./thesis/Introducao/I.md
+./thesis/Introducao/II.md
+./thesis/Introducao/III.md
+./thesis/Introducao/IV.md
+./thesis/Introducao/V.md
+./thesis/Introducao/VI.md
+./thesis/template.md
+./thesis/Conclusao.md
+./thesis/Referencias.md
+./thesis/apendices.md
