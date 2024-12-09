@@ -5,13 +5,13 @@ all:
 	@echo "  save : Save changes"
 
 save:
-	git add .
-	git commit -m $(shell date -Iseconds)
-	git push origin main
+	@git add .
+	@git commit -m $(shell date -Iseconds)
+	@git push origin main
 
 pkgs:
-	sudo apt update -y
-	sudo apt install -y $(shell cat ./apt-packages.txt)
+	@sudo apt update -y
+	@sudo apt install -y $(shell cat ./apt-packages.txt)
 
 doc: data
 	@pandoc \
