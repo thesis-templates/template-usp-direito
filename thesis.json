@@ -1,9 +1,9 @@
 {
-  "annus": 2024,
-  "patria": "bra",
-  "lingua": "por",
-  "universitas": "www.usp.br",
-  "facultas": "direito.usp.br",
-  "repositorium": "repositorio.usp.br",
-  "descriptio": "Faculdade de Direito / Universidade de São Paulo / Brazil"
+  "year": 2024,
+  "description": "Faculdade de Direito / Universidade de São Paulo / Brazil",
+  "iso_country": "bra",
+  "iso_language": "por",
+  "url_university": "https://www.usp.br/",
+  "url_school": "https://direito.usp.br/",
+  "url_repository": "https://repositorio.usp.br/"
 }
